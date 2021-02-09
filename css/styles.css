@@ -8,7 +8,7 @@ Secondary color (orange): #e0b354;
 :root {
   --primary-color: #357b70;
   --secondary-color: #e0b354;
-  --dark-grey: #2b2b2b;
+  --dark-grey: #bbb;
   --visited-color: #05676e;
   --active-color: #489c79;
   --button-text-color: white;
@@ -81,7 +81,7 @@ button, .button {
 
 .button_secondary {
   background-color: var(--secondary-color);
-  color: var(--dark-grey);
+  color: var(--button-text-color);
 }
 
 button:hover, button:focus, .button:hover, .button:focus {

@@ -1,11 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
-/*
 Colors used:
 Text color (dark gray): #2b2b2b;
 Primary color (Purple): #357b70;
@@ -18,13 +11,13 @@ a {
 
 /*Set background color*/
 body {
-  background-color: #2b2b2b;
+  background-color: #bbb;
 }
 
 /*Set font of body text*/
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight:500;
+  font-weight: 500;
   /*Set font size*/
   font-size: 16px;
   /*Set line height*/
@@ -65,8 +58,6 @@ button {
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   display: inline-block;
-  -webkit-transition: 1s opacity;
-  -o-transition: 1s opacity;
   transition: 1s opacity;
 }
 
@@ -84,25 +75,21 @@ button {
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   display: inline-block;
-  -webkit-transition: 1s opacity;
-  -o-transition: 1s opacity;
   transition: 1s opacity;
 }
+
 .navigation-list__item, .homepage-link {
-  -webkit-transition: 0.8s text-shadow;
-  -o-transition: 0.8s text-shadow;
   transition: 0.8s text-shadow;
 }
 
 .navigation-list__item:hover, .navigation-list__item:focus,
 .homepage-link:hover, homepage-link:focus {
-    text-shadow: #FC0 1px 0 10px
-  }
-
+  text-shadow: #FC0 1px 0 10px;
+}
 
 .button_secondary {
   background-color: #e0b354;
-  color: #2b2b2b;
+  color: white;
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
@@ -129,14 +116,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 .page-footer {
   /*prevent footer from flowing around floated elements*/
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /*set flow direction of objects classed "page-footer"*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /*center content of objects classed "page-footer"*/
   text-align: center;
 }
@@ -150,28 +132,21 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 /*ATTENTION: the selector "*" applies styling to all HTML elements within this CSS file*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
 }
 
 .page-header__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 .page-header__item:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -186,9 +161,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
@@ -200,107 +173,68 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 form {
   /*enable flex content for form contents*/
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /*format flexbox into column*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /*enable flex-grow and flex-shrink, set flex-basis for content */
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   /*set side padding so input fields go all the way across page*/
   padding: 0 20%;
 }
 
 .contact-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex-direction: column;
+  flex: 1 1 auto;
   /*align contact info text and anchors*/
   text-align: center;
 }
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
-
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
-    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   h1 {
     font-size: 22px;
   }
+
   .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
+    grid-column: auto/auto;
+    grid-row: auto/auto;
   }
 }
-
 table {
   margin-left: auto;
   margin-right: auto;
 }
 
 .likes-section {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
   text-align: center;
 }
 
 #cv-button {
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-margin-left: 30%;
-margin-right: 30%;
+  display: flex;
+  justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .berlin-illustration {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
-}
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad
-  }
-  100% {
-    fill: #f76414;
-  }
 }
 
 @keyframes color-change {
@@ -308,82 +242,44 @@ margin-right: 30%;
     fill: #edc655;
   }
   50% {
-    fill: #fcffad
+    fill: #fcffad;
   }
   100% {
     fill: #f76414;
   }
 }
- .sun {
-   -webkit-animation-duration: 4s;
-           animation-duration: 4s;
-   -webkit-animation-name: color-change;
-           animation-name: color-change;
-   -webkit-animation-iteration-count: infinite;
-           animation-iteration-count: infinite;
-   -webkit-animation-direction: alternate;
-           animation-direction: alternate;
-   -webkit-animation-timing-function: linear;
-           animation-timing-function: linear;
- }
-
- @-webkit-keyframes cloud-move {
-   from {
-     -webkit-transform: translate(0,50px);
-             transform: translate(0,50px);
-   }
-   to {
-     -webkit-transform: translate(200px, 50px);
-             transform: translate(200px, 50px);
-   }
- }
-
- @keyframes cloud-move {
-   from {
-     -webkit-transform: translate(0,50px);
-             transform: translate(0,50px);
-   }
-   to {
-     -webkit-transform: translate(200px, 50px);
-             transform: translate(200px, 50px);
-   }
- }
-
-.cloud-front {
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -webkit-animation-name: cloud-move;
-          animation-name: cloud-move;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  animation-timing-fuction: linear;
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 
-@-webkit-keyframes cloud-move-reverse {
+@keyframes cloud-move {
   from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(0, 50px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(200px, 50px);
   }
+}
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-fuction: linear;
 }
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(446px, 48px);
-            transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
   }
   to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
   }
 }
-
 .cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
