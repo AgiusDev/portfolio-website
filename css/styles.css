@@ -18,18 +18,20 @@ a {
   color: var(--primary-color);
 }
 
-/*Set background color*/
+/* Set background color */
 body {
   background-color: var(--dark-grey);
 }
 
-/*Set font of body text*/
+/* Set font of body text */
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight:500;
-  /*Set font size*/
+  font-weight: 500;
+
+  /* Set font size */
   font-size: 16px;
-  /*Set line height*/
+
+  /* Set line height */
   line-height: 1.6;
 }
 
@@ -38,53 +40,70 @@ h1 {
   font-weight: 700;
 }
 
-/*set visited link color*/
+/* set visited link color */
 a:visited {
   color: var(--visited-color);
 }
 
-/*No underlining when hovering over a link*/
-a:hover, a:focus {
+/* No underlining when hovering over a link */
+
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
-/*set selected link color*/
+/* set selected link color */
+
 a:active {
   color: var(--active-color);
 }
 
-button, .button {
-  /*reset button border*/
+button,
+.button {
+  /* reset button border */
+
   border: none;
-  /*inherits font from body*/
+
+  /* inherits font from body */
+
   font-family: inherit;
-  /*sets color of button background and font*/
+
+  /* sets color of button background and font */
+
   background-color: var(--primary-color);
   color: var(--button-text-color);
   text-decoration: none;
-  /*adds spacing to button*/
+
+  /* adds spacing to button */
+
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   display: inline-block;
   transition: 1s opacity;
 }
-.navigation-list__item, .homepage-link {
+
+.navigation-list__item,
+.homepage-link {
   transition: 0.8s text-shadow;
 }
 
-.navigation-list__item:hover, .navigation-list__item:focus,
-.homepage-link:hover, homepage-link:focus {
-    text-shadow: #FC0 1px 0 10px
-  }
-
+.navigation-list__item:hover,
+.navigation-list__item:focus,
+.homepage-link:hover,
+.homepage-link:focus {
+  text-shadow: #fc0 1px 0 10px;
+}
 
 .button_secondary {
   background-color: var(--secondary-color);
   color: var(--button-text-color);
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.6;
 }
@@ -94,35 +113,42 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .profile__portrait {
-  /*float profile image to left of home page*/
+  /* float profile image to left of home page */
   float: left;
-  /*set dimensions of objects with class "profile__portrait"*/
+
+  /* set dimensions of objects with class "profile__portrait" */
   height: 250px;
   width: 250px;
-  /*set right margin for objects with class "profile__portrait"*/
+
+  /* set right margin for objects with class "profile__portrait" */
   margin-right: 40px;
-  /*set rounded corners for objects with class "profile__portrait"*/
+
+  /* set rounded corners for objects with class "profile__portrait" */
   border-radius: 50%;
 }
 
 .page-footer {
-  /*prevent footer from flowing around floated elements*/
+  /* prevent footer from flowing around floated elements */
+
   clear: both;
   display: flex;
-  /*set flow direction of objects classed "page-footer"*/
+
+  /* set flow direction of objects classed "page-footer" */
   flex-direction: column;
-  /*center content of objects classed "page-footer"*/
+
+  /* center content of objects classed "page-footer" */
   text-align: center;
 }
 
 .profile {
-  /*set maximum width of objects with class "profile"*/
+  /* set maximum width of objects with class "profile" */
   max-width: 700px;
-  /*set margin of objects with class "profile"*/
+
+  /* set margin of objects with class "profile" */
   margin: 0 auto;
 }
 
-/*ATTENTION: the selector "*" applies styling to all HTML elements within this CSS file*/
+/* ATTENTION: the selector "*" applies styling to all HTML elements within this CSS file */
 * {
   box-sizing: border-box;
 }
@@ -142,8 +168,9 @@ button:hover, button:focus, .button:hover, .button:focus {
   text-align: right;
 }
 
-.navigation-list, .likes-list {
-  /*get rid of the dots on the nav list*/
+.navigation-list,
+.likes-list {
+  /* get rid of the dots on the nav list */
   list-style-type: none;
 }
 
@@ -164,13 +191,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 form {
-  /*enable flex content for form contents*/
+  /* enable flex content for form contents */
   display: flex;
-  /*format flexbox into column*/
+
+  /* format flexbox into column */
   flex-direction: column;
-  /*enable flex-grow and flex-shrink, set flex-basis for content */
+
+  /* enable flex-grow and flex-shrink, set flex-basis for content */
   flex: 1 1 auto;
-  /*set side padding so input fields go all the way across page*/
+
+  /* set side padding so input fields go all the way across page */
   padding: 0 20%;
 }
 
@@ -178,7 +208,8 @@ form {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  /*align contact info text and anchors*/
+
+  /* align contact info text and anchors */
   text-align: center;
 }
 
@@ -198,9 +229,11 @@ form {
   .grid {
     grid-gap: 10px;
   }
+
   h1 {
     font-size: 22px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
@@ -219,10 +252,10 @@ table {
 }
 
 #cv-button {
-display: flex;
-justify-content: center;
-margin-left: 30%;
-margin-right: 30%;
+  display: flex;
+  justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .berlin-illustration {
@@ -234,29 +267,33 @@ margin-right: 30%;
   0% {
     fill: #edc655;
   }
+
   50% {
-    fill: #fcffad
+    fill: #fcffad;
   }
+
   100% {
     fill: #f76414;
   }
 }
- .sun {
-   animation-duration: 4s;
-   animation-name: color-change;
-   animation-iteration-count: infinite;
-   animation-direction: alternate;
-   animation-timing-function: linear;
- }
 
- @keyframes cloud-move {
-   from {
-     transform: translate(0,50px);
-   }
-   to {
-     transform: translate(200px, 50px);
-   }
- }
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
 
 .cloud-front {
   animation-duration: 30s;
@@ -270,6 +307,7 @@ margin-right: 30%;
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
